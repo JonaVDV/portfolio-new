@@ -1,3 +1,6 @@
+# **note: this project is in its early stages**
+this means that the content is not final and manny things are a placeholder
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
