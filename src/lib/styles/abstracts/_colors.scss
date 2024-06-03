@@ -1,0 +1,46 @@
+/// @group Colors
+
+// private variables to put in the map
+$-clr-neutral-light: hsl(243, 76%, 95%);
+$-clr-neutral-dark: hsl(240, 60%, 1%);
+
+$-clr-primary-medium: hsl(212, 100%, 36%);
+$-clr-secondary-medium: hsl(243, 54%, 20%);
+$-clr-accent-medium: hsl(173, 100%, 38%);
+
+$default: (
+	'neutral': (
+		'000': $-clr-neutral-light,
+		'900': $-clr-neutral-dark
+	)
+);
+
+// invert the order of the default colors for dark mode
+// this means 000 is the darkest color and 900/1000 is the lightest
+$dark: (
+	'neutral': (
+		'000': $-clr-neutral-dark,
+		'900': $-clr-neutral-light
+	),
+
+	'primary': (
+		'400': $-clr-primary-medium
+	),
+
+	'secondary': (
+		'400': $-clr-secondary-medium
+	),
+
+	'accent': (
+		'400': $-clr-accent-medium
+	)
+);
+
+// put contextual colors here
+$clr-neutral-000: var(--clr-neutral-000);
+$clr-neutral-900: var(--clr-neutral-900);
+
+$clr-primary-400: var(--clr-primary-400);
+$clr-secondary-400: var(--clr-secondary-400);
+$clr-accent-400: var(--clr-accent-400);
+

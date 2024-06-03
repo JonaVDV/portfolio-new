@@ -1,0 +1,73 @@
+@use '../abstracts' as *;
+
+.section {
+	padding-block: $section-padding;
+}
+
+.mx-auto {
+	margin-inline: auto;
+}
+
+.margin {
+	@each $size, $value in $sizes {
+		&-#{$size} {
+			margin: var(--size-#{$size}, $value);
+		}
+
+		&-block-start-#{$size} {
+			margin-block-start: var(--size-#{$size}, $value);
+		}
+
+		&-block-end-#{$size} {
+			margin-block-end: var(--size-#{$size}, $value);
+		}
+
+		&-inline-start-#{$size} {
+			margin-inline-start: var(--size-#{$size}, $value);
+		}
+
+		&-inline-end-#{$size} {
+			margin-inline-end: var(--size-#{$size}, $value);
+		}
+
+		&-block-#{$size} {
+			margin-block: var(--size-#{$size}, $value);
+		}
+
+		&-inline-#{$size} {
+			margin-inline: var(--size-#{$size}, $value);
+		}
+	}
+}
+
+.padding {
+	@each $size, $value in $sizes {
+		&-#{$size} {
+			padding: var(--size-#{$size}, $value);
+		}
+
+		&-block-start-#{$size} {
+			padding-block-start: var(--size-#{$size}, $value);
+		}
+
+		&-block-end-#{$size} {
+			padding-block-end: var(--size-#{$size}, $value);
+		}
+
+		&-inline-start-#{$size} {
+			padding-inline-start: var(--size-#{$size}, $value);
+		}
+
+		&-inline-end-#{$size} {
+			padding-inline-end: var(--size-#{$size}, $value);
+		}
+
+		&-block-#{$size} {
+			padding-block: var(--size-#{$size}, $value);
+		}
+
+		&-inline-#{$size} {
+			padding-inline: var(--size-#{$size}, $value);
+		}
+	}
+}

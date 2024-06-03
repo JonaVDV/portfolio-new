@@ -1,0 +1,5 @@
+// select all elements with the flow class that are not the first child of their parent
+// and give them a margin-top of 1em/the value of the --flow-spacer variable
+.flow > :where(:not(:first-child)) {
+	margin-top: var(--flow-spacer, 1em);
+}

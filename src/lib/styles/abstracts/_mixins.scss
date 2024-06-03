@@ -1,0 +1,131 @@
+@use 'tokens' as *;
+@use 'breakpoints' as *;
+@use 'typography' as *;
+/// @group mixins
+
+/// creates a media query with the given breakpoint value
+/// @param {string} $breakpoint - breakpoint name
+@mixin mq($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$value: map-get($breakpoints, $breakpoint);
+		@media (min-width: $value) {
+			@content;
+		}
+	} @else {
+		@error 'breakpoint #{$breakpoint} does not exist in $breakpoints map';
+	}
+}
+
+/// creates a media query with the given max-width value
+/// @param {string} $breakpoint - breakpoint name
+///
+/// @example
+/// .container{
+///  @include mq-max('md'){
+///   max-width: 100%;
+/// }
+///
+///
+@mixin mq-max($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$value: map-get($breakpoints, $breakpoint);
+		@media (max-width: $value) {
+			@content;
+		}
+	} @else {
+		@error 'breakpoint #{$breakpoint} does not exist in $breakpoints map';
+	}
+}
+
+/// creates a heading with the given font-size, font-weight, line-height and color
+/// @param {string} $font-size - font-size value of the heading
+/// @param {number} $font-weight - font-weight value of the heading
+/// @param {number} $line-height - line-height value of the heading
+/// @param {color} $color - color value of the heading
+///
+/// @example
+/// .heading-1{
+///   @include heading(1rem, 700, 1);
+/// }
+///
+///
+@mixin heading(
+	$font-size,
+	$font-weight,
+	$font-family: $heading-font-family,
+	$line-height: $heading-line-height,
+	$color: $heading-color
+) {
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+	color: $color;
+	@content;
+}
+
+/// set the font sizes properties for the given sizes
+/// @param {map} $sizes - map of font sizes
+/// @output {css variables} --fs-#{$size} - css variable for each font size
+/// @group mixins
+@mixin set-font-sizes($sizes) {
+	@each $size, $value in $sizes {
+		--fs-#{$size}: #{$value};
+	}
+}
+
+///
+/// @param {Map} $color-map - the map of colors to loop over
+/// @output {css variables} --clr-#{$color-name}-#{$lightness} - css variable for each color
+@mixin set-color-properties($color-map) {
+	@each $color-name, $color-values in $color-map {
+		@each $lightness, $value in $color-values {
+			--clr-#{$color-name}-#{$lightness}: #{$value};
+		}
+	}
+}
+
+/// Mixin for creating container queries.
+/// It checks if the provided breakpoint has a unit and if it's in pixels, it converts it to rem.
+/// If the breakpoint is not in pixels, it uses the provided unit.
+///
+/// @access public
+/// @name cq
+/// @author JonaVDV
+/// @since Version 1.0.0
+///
+/// @param {Number} $breakpoint - The breakpoint at which the media query should apply. Must have a unit.
+///
+/// @example scss - Using the mixin with a pixel value
+///   @include cq(600px) {
+///     font-size: 1.2rem;
+///   }
+///
+/// @example scss - Using the mixin with a rem value
+///   @include cq(37.5rem) {
+///     font-size: 1.2rem;
+///   }
+///
+/// @throws {Error} Throws an error if the breakpoint is unitless.
+@mixin cq($breakpoint, $name: null) {
+	@if unitless($breakpoint) {
+		@error 'breakpoint #{$breakpoint} must have a unit';
+	}
+
+	@if unit($breakpoint) == 'px' {
+		@container $name (min-width: pxToRem($breakpoint)) {
+			@content;
+		}
+	} @else {
+		@container $name (min-width: $breakpoint) {
+			@content;
+		}
+	}
+}
+
+@mixin container($type: inline-size, $name) {
+	container-type: $type;
+	@if $name != null {
+		container-name: $name;
+	}
+}
