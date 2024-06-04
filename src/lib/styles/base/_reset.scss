@@ -50,10 +50,9 @@ h6 {
   * set the text-wrap property to pretty to avoid orphans and widows
 */
 p {
-
 	text-wrap: pretty;
 	//
-	max-width: var(--max-length, auto); 
+	max-width: var(--max-length, auto);
 }
 
 /**

@@ -90,9 +90,9 @@
 			color: $clr-neutral-900;
 			text-decoration: $navigation-link-text-decoration;
 			transition: color 300ms ease-in-out;
-            &:hover{
-                color: $clr-primary-400;
-            }
+			&:hover {
+				color: $clr-primary-400;
+			}
 		}
 	}
 	.nav {

@@ -24,13 +24,17 @@
 		</nav>
 		<div class="">
 			<Heading level={3} class="footer-title">Contact</Heading>
-            
+
 			<ul role="list" class="margin-block-start-3 flow" style="--flow-spacer: .25em">
-                <li>
-                    <a href="mailto:j.vdv@outlook.com" class="flex-group"><Mail /> email </a>
-                </li>
 				<li>
-					<a href="https://www.linkedin.com/in/jona-van-der-vlist-8527a5234" target="blank" class="flex-group">
+					<a href="mailto:j.vdv@outlook.com" class="flex-group"><Mail /> email </a>
+				</li>
+				<li>
+					<a
+						href="https://www.linkedin.com/in/jona-van-der-vlist-8527a5234"
+						target="blank"
+						class="flex-group"
+					>
 						<Linkedin /> LinkedIn
 					</a>
 					<a href="https://github.com/JonaVDV" target="_blank" class="flex-group">

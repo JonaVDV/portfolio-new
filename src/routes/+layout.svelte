@@ -6,19 +6,19 @@
 	import Hero from '$components/header/hero.svelte';
 	import Footer from '$components/footer/footer.svelte';
 	export let data: LayoutData;
-
 </script>
 
-
 <svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+		rel="stylesheet"
+	/>
 </svelte:head>
 <Navigation></Navigation>
 <Header>
-	<svelte:fragment slot="navigation">
-	</svelte:fragment>
+	<svelte:fragment slot="navigation"></svelte:fragment>
 	<svelte:fragment slot="hero">
 		<Hero></Hero>
 	</svelte:fragment>
@@ -26,14 +26,11 @@
 <main>
 	<slot></slot>
 </main>
-<Footer>
-	
-</Footer>
+<Footer></Footer>
 
 <style lang="scss">
 	main {
 		display: grid;
 		height: 100%;
-
 	}
 </style>

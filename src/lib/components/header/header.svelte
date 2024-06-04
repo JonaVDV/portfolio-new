@@ -2,10 +2,10 @@
 </script>
 
 <header class="site-header">
-    <div class="site-header--inner">
-        <slot name="navigation"/>
-    </div>
-    <slot name="hero"/>
+	<div class="site-header--inner">
+		<slot name="navigation" />
+	</div>
+	<slot name="hero" />
 </header>
 
 <style lang="scss">
