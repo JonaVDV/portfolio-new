@@ -20,7 +20,7 @@
 				</p>
 				<div class="flex-group" style="--flex-gap: var(--size-4)">
 					<Button variant="primary">Chech out my projects</Button>
-					<Button variant="secondary">Contact me</Button>
+					<Button href="/contact" variant="secondary">Contact me</Button>
 				</div>
 			</div>
 		</div>

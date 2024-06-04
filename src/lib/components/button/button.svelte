@@ -1,10 +1,10 @@
 <script lang="ts">
 	export let href: string | undefined = undefined;
-    export let variant: 'primary' | 'secondary' = 'primary';
+	export let variant: 'primary' | 'secondary' = 'primary';
 </script>
 
 {#if href}
-	<a {href} class="button">
+	<a {href} class="button" data-button-type={variant}>
 		<slot></slot>
 	</a>
 {:else}
@@ -23,7 +23,7 @@
 		padding: $button-padding;
 		border-radius: $button-border-radius;
 		// border: $button-border;
-        border: 0;
+		border: 0;
 		font-size: $button-font-size;
 		font-weight: $button-font-weight;
 		transition:
