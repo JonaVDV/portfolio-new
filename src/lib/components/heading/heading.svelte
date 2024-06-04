@@ -1,6 +1,8 @@
 <script lang='ts'>
+	import type { HTMLAttributes } from "svelte/elements";
+
     export let level: $$Props['level'];
-    interface $$Props extends HTMLHeadElement {
+    interface $$Props extends HTMLAttributes<HTMLElement> {
         level: 1 | 2 | 3 | 4 | 5 | 6;
     }
 </script>
