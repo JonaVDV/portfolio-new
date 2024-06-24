@@ -114,7 +114,7 @@
 	}
 
 	@if unit($breakpoint) == 'px' {
-		@container #{$name} (min-width: pxToRem($breakpoint)) {
+		@container #{$name} (min-width: #{$breakpoint}) {
 			@content;
 		}
 	} @else {
@@ -130,7 +130,7 @@
 	}
 
 	@if unit($breakpoint) == 'px' {
-		@container #{$name} (max-width: pxToRem($breakpoint)) {
+		@container #{$name} (max-width: #{$breakpoint}) {
 			@content;
 		}
 	} @else {

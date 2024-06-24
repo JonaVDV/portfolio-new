@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { setContext, onMount } from 'svelte';
+	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
+import { setContext, onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 	const slides = writable<string[]>([]);
 
@@ -16,6 +17,14 @@
 				activeSlide = $slides[currentIndex];
 			}
 		});
+	}
+
+	function mousePosition(e: MouseEvent) {
+		console.log(e.clientX, e.clientY);
+	}
+
+	function grabScroll(el: HTMLElement){
+
 	}
 
 	function nextSlide() {
@@ -42,18 +51,20 @@
 <div class="carousel wrapper">
 	{#if controls}
 		<div class="controls flex-group space-between">
-			<a class="prev" href="javascript:void(0)" on:click|preventDefault={prevSlide}>
+			<button class="prev" on:click={prevSlide}>
 				<!-- svg for chevron left -->
 				<!-- ... -->
-			</a>
-			<a class="next" href="javascript:void(0)" on:click|preventDefault={nextSlide}>
+				<ChevronLeft />
+			</button>
+			<button class="next" on:click={nextSlide}>
 				<!-- svg for chevron right -->
 				<!-- ... -->
-			</a>
+				<ChevronRight />
+			</button>
 		</div>
 	{/if}
 
-	<div class="slides" use:scrollableCarousel>
+	<div class="slides" use:scrollableCarousel on:mousemove={mousePosition}>
 		<slot></slot>
 	</div>
 </div>
