@@ -18,6 +18,9 @@
 					waarop ik problemen kan oplossen.
 				</p>
 				<p class="fs-600" style="--max-length: 60ch">
+					Ik heb best wat kennis over het hele gebied van front-end development, maar ik heb ook kennis van back-end zo nodig
+				</p>
+				<p class="fs-600" style="--max-length: 60ch">
 					Als je op zoek bent naar iemand die je kan helpen met het bouwen van een website of
 					webapplicatie, zou ik graag met je in contact komen.
 				</p>
