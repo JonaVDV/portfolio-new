@@ -18,7 +18,6 @@
 				<NavigationItem href="/contact">Contact</NavigationItem>
 			</ul>
 			<div class="social">
-				<!-- <ThemeSwitch /> -->
 				<ul role="list" class="flex-group" style="--flex-gap: var(--size-2)">
 					<li>
 						<a href="https://www.linkedin.com/in/jona-van-der-vlist-8527a5234" target="blank">

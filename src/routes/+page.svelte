@@ -4,9 +4,6 @@
 	import Slide from '$components/carousel/slide.svelte';
 	import Heading from '$components/heading/heading.svelte';
 	import Wrapper from '$components/wrapper/wrapper.svelte';
-	import { gsap, ScrollTrigger, scrollTimeline } from '$animations';
-	import Hero from '$components/header/hero.svelte';
-	import Header from '$components/header/header.svelte';
 </script>
 
 <Wrapper width="wide">
@@ -19,10 +16,10 @@
 					Mijn naam is Jona, ik ben een front-end developer gebaseerd in Nederland. Ik heb een gote
 					passie voor webdevelopment en ik ben altijd op zoek naar nieuwe features of manieren
 					waarop ik problemen kan oplossen.
-					<br />
-					<br />
-					Als je op zoek bent naar iemand die je kan helpen met het bouwen van een website of webapplicatie,
-					zou ik graag met je in contact komen.
+				</p>
+				<p class="fs-600" style="--max-length: 60ch">
+					Als je op zoek bent naar iemand die je kan helpen met het bouwen van een website of
+					webapplicatie, zou ik graag met je in contact komen.
 				</p>
 				<div class="flex-group" style="--flex-gap: var(--size-4)">
 					<Button variant="primary">Mijn projecten</Button>

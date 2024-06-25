@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import {gsap} from '$animations';
 
 	export let href: string;
 
