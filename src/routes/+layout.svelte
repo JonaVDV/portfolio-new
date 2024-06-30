@@ -25,7 +25,7 @@
 	</svelte:fragment>
 </Header> -->
 
-<header class="primary-header bg-neutral-900">
+<header class="primary-header bg-neutral-000">
 	<div class="header--inner">
 		<div class="wrapper">
 			<nav class="primary-navigation">
