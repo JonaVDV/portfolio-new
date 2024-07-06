@@ -23,6 +23,7 @@
 		padding: $button-padding;
 		border-radius: $button-border-radius;
 		// border: $button-border;
+		text-decoration: none;
 		border: 0;
 		font-size: $button-font-size;
 		font-weight: $button-font-weight;
@@ -37,6 +38,16 @@
 			&:is(:hover, :focus) {
 				background-color: $button-primary-background-color-hover;
 				color: $button-primary-color-hover;
+			}
+		}
+
+		&[data-button-type='secondary'] {
+			background-color: $button-secondary-background-color;
+			color: $button-secondary-color;
+
+			&:is(:hover, :focus) {
+				background-color: $button-secondary-background-color-hover;
+				color: $button-secondary-color-hover;
 			}
 		}
 	}

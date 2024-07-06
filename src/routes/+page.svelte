@@ -13,19 +13,21 @@
 				<Heading level={2}>Wie ben jij?!?</Heading>
 
 				<p class="fs-600" style="--max-length: 60ch">
-					Mijn naam is Jona, ik ben een front-end developer gebaseerd in Nederland. Ik heb een gote
-					passie voor webdevelopment en ik ben altijd op zoek naar nieuwe features of manieren
+					Mijn naam is Jona, ik ben een front-end developer gevestigd in Nederland. Ik heb een grote
+					passie voor webontwikkeling en ik ben altijd op zoek naar nieuwe functies of manieren
 					waarop ik problemen kan oplossen.
 				</p>
 				<p class="fs-600" style="--max-length: 60ch">
-					Ik heb best wat kennis over het hele gebied van front-end development, maar ik heb ook kennis van back-end zo nodig
+					Ik heb kennis van veel verschillende talen en ben creatief in het bouwen van websites en
+					het oplossen van problemen. Mijn missie is het maken van websites voor klanten op een
+					leuke manier door gebruik van kleine effecten/animaties
 				</p>
 				<p class="fs-600" style="--max-length: 60ch">
 					Als je op zoek bent naar iemand die je kan helpen met het bouwen van een website of
 					webapplicatie, zou ik graag met je in contact komen.
 				</p>
 				<div class="flex-group" style="--flex-gap: var(--size-4)">
-					<Button variant="primary">Mijn projecten</Button>
+					<Button href="/projects" variant="primary">Mijn projecten</Button>
 					<Button href="/contact" variant="secondary">Contact</Button>
 				</div>
 			</div>
